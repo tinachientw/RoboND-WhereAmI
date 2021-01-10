@@ -1,7 +1,7 @@
 [![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
 
 # Where am I
-![Lanes Image](./doc/where_am_i_2.gif)
+![Lanes Image](./doc/where_am_i.gif)
 
 Project 3 of the Udacity Robotics Software Engineer Nanodegree. Localization project.In this project, I utilized ROS AMCL package to accurately localize a mobile robot inside a map in the Gazebo simulation environments.
 
