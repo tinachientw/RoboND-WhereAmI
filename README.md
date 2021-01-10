@@ -80,17 +80,25 @@ roslaunch my_robot amcl.launch
 ```  
 * Testing  
 You have two options to control your robot while it localize itself here:  
-  * Send navigation goal via RViz  
-  * Send move command via teleop package.  
+   1. Send navigation goal via RViz  
+   2. Send move command via teleop package.  
 Navigate your robot, observe its performance and tune your parameters for AMCL.  
 
 **Option 1: Send `2D Navigation Goal`**  
+
 Your first option would be sending a `2D Nav Goal` from RViz. The `move_base` will try to navigate your robot based on the localization. Based on the new observation and the odometry, the robot to further perform the localization.  
 Click the `2D Nav Goal` button in the toolbar, then click and drag on the map to send the goal to the robot. It will start moving and localize itself in the process. If you would like to give `amcl` node a nudge, you could give the robot an initial position estimate on the map using `2D Pose Estimate`.  
+
 **Option 2: Use `teleop` Node**  
-You could also use teleop node to control your robot and observe it localize itself in the environment.  
+You could also use teleop node to control your robot and observe it localize itself in the environment.  [Teleop Package](https://github.com/ros-teleop/teleop_twist_keyboard)
+
 Open another terminal and launch the `teleop` script:  
 ```
+cd $PATH_TO_PARENT_DIR/catkin_ws/src
+git clone https://github.com/ros-teleop/teleop_twist_keyboard
+
+cd $PATH_TO_PARENT_DIR/catkin_ws/
+catkin_make
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 You could control your robot by keyboard commands now.  
